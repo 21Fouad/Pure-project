@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body p {
+  color: #555;
+}
+.load {
+  background-color: orange;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #333;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+.btn-style {
+  background-image: linear-gradient(90deg, #8b62ff 0, #3b1bff);
+  border: none;
+}
+.btn-style a {
+  text-decoration: none;
+  color: #fff;
+}
+.icons {
+  color: black;
+  border: 1px #ccc solid;
+  border-radius: 50%;
+  padding: 5px;
+}
+.icons:hover {
+  color: #8b62ff;
+}
+.second-section {
+  text-align: center;
+}
+.start-text p {
+  text-align: start;
+}
+.fourth-section {
+  text-align: center;
+  background-color: purple;
+}
+.fourth-section h2,
+.fourth-section p {
+  color: white;
+}
+.check {
+  color: #8b62ff;
+  border: 1px #8b62ff solid;
+  border-radius: 50%;
+  padding: 5px;
+}
